@@ -1,0 +1,14 @@
+# Go
+/service/fieldworkd
+*.test
+
+# Swift / Xcode
+.build/
+DerivedData/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.swiftpm/
+.swiftpm/
+
+# macOS
+.DS_Store

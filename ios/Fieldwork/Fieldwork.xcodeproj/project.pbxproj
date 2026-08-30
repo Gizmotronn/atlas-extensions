@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		291762FEE49FDF4E6150876A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B26106C10F0FF593D35849 /* RootView.swift */; };
+		4EFB5D7C079CD7CB7CC76CD4 /* ScanStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B6FEFAB1288757A10C60 /* ScanStore.swift */; };
+		646F3C78F0578E3F57B825A9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5480DB910F78B697212997E /* Theme.swift */; };
+		77F376F385EEEF6C6C7A9444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B120A1D8C2148F36D4876A3 /* Assets.xcassets */; };
+		83B763A7AB034C1428A7A7E3 /* FieldworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691D260A62DD981CDED05AA /* FieldworkApp.swift */; };
+		998A7A3C8B5C92A0B20F49D1 /* ScanCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE40CD05DEA80944952F93 /* ScanCaptureView.swift */; };
+		9D5078C99A0F2649B097B9B9 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C01D2254A9F56D8F03E41 /* AuthStore.swift */; };
+		AC0813333BDBA5F634957DA9 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B134BAB2B1446E607031A77 /* SignInView.swift */; };
+		CDAE0C8F8445AE253C86368F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC98A8B5F38E34C9CF534E /* TodayView.swift */; };
+		CDE25C16027064FD80573C30 /* FieldworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 588BD1B12B90168730946891 /* FieldworkKit */; };
+		F5B0F50535D90B6DF130715B /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303168884F319ED8604EE5D /* AppConfig.swift */; };
+		F6E870589DE7F7693F835F8F /* PocketBaseAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4312A0DC2306FA419CD8F /* PocketBaseAuthClient.swift */; };
+		F906FA4B28F5155143D0D0C9 /* ScanResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E0C3487C6410DF630748B5 /* ScanResultView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0DB4312A0DC2306FA419CD8F /* PocketBaseAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketBaseAuthClient.swift; sourceTree = "<group>"; };
+		28B26106C10F0FF593D35849 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		2ABE40CD05DEA80944952F93 /* ScanCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCaptureView.swift; sourceTree = "<group>"; };
+		2B134BAB2B1446E607031A77 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		5303168884F319ED8604EE5D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		5AB3B420B0419B7EF26723E8 /* FieldworkKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FieldworkKit; path = ../../fieldwork/swift/FieldworkKit; sourceTree = SOURCE_ROOT; };
+		773C01D2254A9F56D8F03E41 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
+		93E0C3487C6410DF630748B5 /* ScanResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultView.swift; sourceTree = "<group>"; };
+		9691D260A62DD981CDED05AA /* FieldworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldworkApp.swift; sourceTree = "<group>"; };
+		9B120A1D8C2148F36D4876A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC82B6FEFAB1288757A10C60 /* ScanStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanStore.swift; sourceTree = "<group>"; };
+		B295F1F58FEEED0F0E9D5578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C8EC98A8B5F38E34C9CF534E /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		DE5DD3E6E3BF0864745D3E70 /* Fieldwork.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Fieldwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5480DB910F78B697212997E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05D1304F86EE86B44294853A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE25C16027064FD80573C30 /* FieldworkKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C222535CCA8C2E1D8FEA5A0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FE4A23FC37EA379DD1F5F570 /* Fieldwork */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		4D9645C1378701535DF5FAB8 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				5AB3B420B0419B7EF26723E8 /* FieldworkKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		50CD80FB63417A222EEE4DAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5303168884F319ED8604EE5D /* AppConfig.swift */,
+				773C01D2254A9F56D8F03E41 /* AuthStore.swift */,
+				0DB4312A0DC2306FA419CD8F /* PocketBaseAuthClient.swift */,
+				AC82B6FEFAB1288757A10C60 /* ScanStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6E02D30DBF6B283A24D9EFD5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9691D260A62DD981CDED05AA /* FieldworkApp.swift */,
+				B295F1F58FEEED0F0E9D5578 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8DA732ADDDD6F3CF13C5B13E = {
+			isa = PBXGroup;
+			children = (
+				4D9645C1378701535DF5FAB8 /* Packages */,
+				1C222535CCA8C2E1D8FEA5A0 /* Sources */,
+				CCECE89F5A187FFA00D080A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91A63DC25E701A99743931DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28B26106C10F0FF593D35849 /* RootView.swift */,
+				2ABE40CD05DEA80944952F93 /* ScanCaptureView.swift */,
+				93E0C3487C6410DF630748B5 /* ScanResultView.swift */,
+				2B134BAB2B1446E607031A77 /* SignInView.swift */,
+				C8EC98A8B5F38E34C9CF534E /* TodayView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CCECE89F5A187FFA00D080A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE5DD3E6E3BF0864745D3E70 /* Fieldwork.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE4A23FC37EA379DD1F5F570 /* Fieldwork */ = {
+			isa = PBXGroup;
+			children = (
+				9B120A1D8C2148F36D4876A3 /* Assets.xcassets */,
+				6E02D30DBF6B283A24D9EFD5 /* App */,
+				50CD80FB63417A222EEE4DAD /* Models */,
+				FF3616EBE5995580F5EB0E46 /* Theme */,
+				91A63DC25E701A99743931DB /* Views */,
+			);
+			path = Fieldwork;
+			sourceTree = "<group>";
+		};
+		FF3616EBE5995580F5EB0E46 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				F5480DB910F78B697212997E /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EE03B43F0C705305799EAAC /* Fieldwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F23703E55051E747929AC1AA /* Build configuration list for PBXNativeTarget "Fieldwork" */;
+			buildPhases = (
+				714D24911A9215EE43C35D1C /* Sources */,
+				47A601CCE3EBC1924C922C95 /* Resources */,
+				05D1304F86EE86B44294853A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fieldwork;
+			packageProductDependencies = (
+				588BD1B12B90168730946891 /* FieldworkKit */,
+			);
+			productName = Fieldwork;
+			productReference = DE5DD3E6E3BF0864745D3E70 /* Fieldwork.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE8C66431EA8DA94625520C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = EB149D867FFDF4BEA9E8BE4F /* Build configuration list for PBXProject "Fieldwork" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 8DA732ADDDD6F3CF13C5B13E;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A1483E0E5C2125ACD215D142 /* XCLocalSwiftPackageReference "../../fieldwork/swift/FieldworkKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EE03B43F0C705305799EAAC /* Fieldwork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47A601CCE3EBC1924C922C95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77F376F385EEEF6C6C7A9444 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		714D24911A9215EE43C35D1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B0F50535D90B6DF130715B /* AppConfig.swift in Sources */,
+				9D5078C99A0F2649B097B9B9 /* AuthStore.swift in Sources */,
+				83B763A7AB034C1428A7A7E3 /* FieldworkApp.swift in Sources */,
+				F6E870589DE7F7693F835F8F /* PocketBaseAuthClient.swift in Sources */,
+				291762FEE49FDF4E6150876A /* RootView.swift in Sources */,
+				998A7A3C8B5C92A0B20F49D1 /* ScanCaptureView.swift in Sources */,
+				F906FA4B28F5155143D0D0C9 /* ScanResultView.swift in Sources */,
+				4EFB5D7C079CD7CB7CC76CD4 /* ScanStore.swift in Sources */,
+				AC0813333BDBA5F634957DA9 /* SignInView.swift in Sources */,
+				646F3C78F0578E3F57B825A9 /* Theme.swift in Sources */,
+				CDAE0C8F8445AE253C86368F /* TodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		023979F37C27EF8508E83C91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Sources/Fieldwork/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.skinetics.fieldwork;
+				PRODUCT_NAME = Fieldwork;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B1DFB4715D52A14E9481D2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		81E0AD265285B978BBEAC6C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Sources/Fieldwork/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.skinetics.fieldwork;
+				PRODUCT_NAME = Fieldwork;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A72B293BAB2C2ED0A30366FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB149D867FFDF4BEA9E8BE4F /* Build configuration list for PBXProject "Fieldwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A72B293BAB2C2ED0A30366FB /* Debug */,
+				5B1DFB4715D52A14E9481D2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F23703E55051E747929AC1AA /* Build configuration list for PBXNativeTarget "Fieldwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81E0AD265285B978BBEAC6C7 /* Debug */,
+				023979F37C27EF8508E83C91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A1483E0E5C2125ACD215D142 /* XCLocalSwiftPackageReference "../../fieldwork/swift/FieldworkKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../fieldwork/swift/FieldworkKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		588BD1B12B90168730946891 /* FieldworkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FieldworkKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AE8C66431EA8DA94625520C1 /* Project object */;
+}
