@@ -100,6 +100,113 @@ func (c *Client) ListRecords(ctx context.Context, collection string, params url.
 	return body, nil
 }
 
+// SuperuserAuthResult is the response shape of PocketBase's
+// /api/collections/_superusers/auth-with-password endpoint.
+type SuperuserAuthResult struct {
+	Token string `json:"token"`
+}
+
+// AuthWithPassword authenticates as a PocketBase superuser, returning a
+// bearer token for background jobs that need to read/write across every
+// user's records (e.g. skybrightness's processor scanning all pending
+// citizen-science submissions) -- the same endpoint schema.NewEnsurer uses
+// for Fieldwork's own schema bootstrap.
+func (c *Client) AuthWithPassword(ctx context.Context, email, password string) (SuperuserAuthResult, error) {
+	var out SuperuserAuthResult
+	payload, err := json.Marshal(map[string]string{"identity": email, "password": password})
+	if err != nil {
+		return out, err
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, c.BaseURL+"/api/collections/_superusers/auth-with-password", bytes.NewReader(payload))
+	if err != nil {
+		return out, err
+	}
+	req.Header.Set("Content-Type", "application/json")
+
+	resp, err := c.HTTPClient.Do(req)
+	if err != nil {
+		return out, err
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return out, err
+	}
+	if resp.StatusCode != http.StatusOK {
+		return out, fmt.Errorf("pbclient: superuser auth failed: %s: %s", resp.Status, string(body))
+	}
+	if err := json.Unmarshal(body, &out); err != nil {
+		return out, fmt.Errorf("pbclient: decoding superuser auth response: %w", err)
+	}
+	return out, nil
+}
+
+// UpdateRecord patches an existing record. Used by the skybrightness
+// processor to write plate-solved photometry results back onto an
+// atlas_observations row after the client has already created it.
+func (c *Client) UpdateRecord(ctx context.Context, collection, id string, payload any, token string) (json.RawMessage, error) {
+	buf, err := json.Marshal(payload)
+	if err != nil {
+		return nil, err
+	}
+
+	u := fmt.Sprintf("%s/api/collections/%s/records/%s", c.BaseURL, collection, id)
+	req, err := http.NewRequestWithContext(ctx, http.MethodPatch, u, bytes.NewReader(buf))
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Set("Content-Type", "application/json")
+	if token != "" {
+		req.Header.Set("Authorization", token)
+	}
+
+	resp, err := c.HTTPClient.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("pbclient: update %s/%s failed: %s: %s", collection, id, resp.Status, string(body))
+	}
+	return body, nil
+}
+
+// GetFile downloads a record's file attachment (PocketBase's legacy
+// same-instance file storage, distinct from Atlas's private R2 media path
+// -- see the TODO in skybrightness/internal/processor for R2 support).
+func (c *Client) GetFile(ctx context.Context, collection, recordID, filename, token string) ([]byte, error) {
+	u := fmt.Sprintf("%s/api/files/%s/%s/%s", c.BaseURL, collection, recordID, filename)
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u, nil)
+	if err != nil {
+		return nil, err
+	}
+	if token != "" {
+		req.Header.Set("Authorization", token)
+	}
+
+	resp, err := c.HTTPClient.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("pbclient: get file %s/%s/%s failed: %s", collection, recordID, filename, resp.Status)
+	}
+	return body, nil
+}
+
 // CreateRecord creates a record in the given collection, authenticated as
 // token (the caller's own user token, or a superuser token for
 // schema/admin operations).

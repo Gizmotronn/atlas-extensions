@@ -1,10 +1,22 @@
 # atlas-extensions
 
+A playground for Star Sailors/Atlas concepts and experiments that don't
+belong in the main `signal-k/atlas` web app -- each module here is
+decoupled, talking to the shared PocketBase instance only as an API client.
+
 **Fieldwork** — a Star Sailors–wide module: point your phone at the sky (or
 upload a photo) with your location and time, and get back what you're
 looking at, any special events happening, and device-specific photography
 advice. Atlas is the first consumer; the module is built to stay portable
 to other Star Sailors games and other client languages.
+
+**skybrightness** — processes Atlas's citizen-science Journal submissions
+(currently Globe at Night-style light-pollution campaigns): a user uploads
+a night-sky photo and a comment, and this service plate-solves it (reusing
+Fieldwork's star catalog and plate-solving code) to estimate sky brightness
+automatically, rather than asking the user to manually match star charts
+the way Globe at Night's own form does. See
+[`skybrightness/README.md`](skybrightness/README.md).
 
 Forked from the "Pokedex Field OS" idea
 ([Jastman/Scout-Pokedex-Field-OS](https://github.com/Jastman/Scout-Pokedex-Field-OS)),
@@ -24,6 +36,8 @@ service/               Standalone Go HTTP service (fieldworkd) — the only
                        piece that talks to PocketBase with real user auth
 ios/Fieldwork/          Minimal SwiftUI app (xcodegen), the current client
 docs/                  Architecture notes, deferred-port stubs
+skybrightness/         Citizen-science photo processor (poll loop, not an
+                       HTTP service) — see skybrightness/README.md
 ```
 
 This repo is **decoupled from `~/Navigation/backend`**: Fieldwork owns its
